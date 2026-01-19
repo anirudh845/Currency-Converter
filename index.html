@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Currency Converter</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Currency Converter</h2>
+
+        <form>
+            <div class="enter-amount">
+                <p>Enter the amount to convert:</p>
+                <input type="number" id="amount" placeholder="Enter amount">
+                <!-- Error message below input (as per your design) -->
+                <p class="error-message"></p>
+            </div>
+
+            <div class="dropdown">
+                <div class="from">
+                    <p>From</p>
+                    <div class="select-container">
+                        <div class="country-details">
+                            <img id="from-flag" src="https://flagcdn.com/64x48/us.png" alt="United States Flag">
+                            <p id="from-country-name">United States</p>
+                        </div>
+                        <!-- Pre-selected option (will be overridden by JS but good for fallback) -->
+                        <select id="from-select" name="from">
+                            <option value="USD" selected>USD</option>
+                        </select>
+                    </div>
+                </div>
+                <i class="fa-solid fa-arrow-right-arrow-left"></i>
+                <div class="to">
+                    <p>To</p>
+                    <div class="select-container">
+                        <div class="country-details">
+                            <img id="to-flag" src="https://flagcdn.com/64x48/in.png" alt="India Flag">
+                            <p id="to-country-name">India</p>
+                        </div>
+                        <!-- Pre-selected option -->
+                        <select id="to-select" name="to">
+                            <option value="INR" selected>INR</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <button type="button" class="convert">Get Exchange Rate</button>
+            <div class="message-box"></div>
+        </form>
+    </div>
+
+    <script src="countries.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
